@@ -1,5 +1,5 @@
 <x-guest-layout>
-    <div class="relative flex items-top justify-center dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+    <div class="relative flex items-top justify-center sm:items-center py-4 sm:pt-0">
         <div class="p-6 text-gray-900">
             <div class="text-2xl items-center">Start Your Page Today</div>
             <form method="POST" action="{{ route('page.store') }}" enctype="multipart/form-data">

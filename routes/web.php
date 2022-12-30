@@ -19,6 +19,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/test', function() {
+    return view('test');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -31,6 +35,6 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/{name}', [PageController::class, 'show'])->name('page.show');
+Route::get('/{link}', [PageController::class, 'show'])->name('page.show');
 Route::get('/page/create', [PageController::class, 'create'])->name('page.create')->middleware('auth');
 Route::post('/page', [PageController::class, 'store'])->name('page.store')->middleware('auth');

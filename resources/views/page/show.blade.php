@@ -1,9 +1,12 @@
 <x-app-layout>
-    <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+    <div class="relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center py-4 sm:pt-0">
         <div>
             <div class="flex justify-center"><img class="rounded-full w-36" src="storage/{{ $page->image }}"></div>
             <div class="flex justify-center text-3xl font-bold">{{ $page->user->name }}</div>
             <div class="flex justify-center">{{ $page->work }}</div>
+            <button x-on:click="console.log('asdas')">
+                console
+            </button>
             <div class="">
                 <div class="grid grid-cols-3">
                     <div class="relative col-span-2 border-2 border-solid border-gray-300 rounded-xl p-3 m-5">
